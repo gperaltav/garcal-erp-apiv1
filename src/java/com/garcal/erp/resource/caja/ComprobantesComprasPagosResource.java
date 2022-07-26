@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.caja;
 
-
 import com.garcal.erp.DAO.caja.ComprobantesComprasPagosDAO;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.caja.ComprobantesComprasPagos;
@@ -26,7 +25,7 @@ import javax.ws.rs.core.Response;
 @Path("comprobantescompraspagos")
 
 public class ComprobantesComprasPagosResource {
-    
+
     @POST
     @Path("nuevo")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -104,11 +103,11 @@ public class ComprobantesComprasPagosResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response buscarJsonProveedorGet(ComprobantesComprasPagos comprobantesComprasPagos ) {
+    public Response buscarJsonProveedorGet(ComprobantesComprasPagos comprobantesComprasPagos) {
         ArrayList<ComprobantesComprasPagos> detail = ComprobantesComprasPagosDAO.selectFiltro(comprobantesComprasPagos);
         return Response.status(Response.Status.OK)
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
@@ -117,5 +116,5 @@ public class ComprobantesComprasPagosResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-  
+
 }

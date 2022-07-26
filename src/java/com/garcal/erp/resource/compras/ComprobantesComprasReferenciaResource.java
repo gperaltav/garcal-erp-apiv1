@@ -5,8 +5,6 @@
  */
 package com.garcal.erp.resource.compras;
 
-
-
 import com.garcal.erp.DAO.compras.ComprobantesComprasReferenciaDAO;
 import com.garcal.erp.model.compras.ComprobantesComprasReferencia;
 import com.google.gson.Gson;
@@ -23,13 +21,12 @@ import javax.ws.rs.core.Response;
  *
  * @author User
  */
-
 @Path("comprobantescomprasreferencia")
 
 public class ComprobantesComprasReferenciaResource {
-   
-      @GET
-       @Path("{idEmpresa}")
+
+    @GET
+    @Path("{idEmpresa}")
     // @Path("{businessid}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})

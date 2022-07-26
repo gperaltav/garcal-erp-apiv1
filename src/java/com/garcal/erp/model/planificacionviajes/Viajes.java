@@ -45,15 +45,15 @@ public class Viajes {
     private String veh_conductor;
     private String ubi_codigoorigen;
     private String ubi_codigodestino;
-     private String ubi_nombreorigen;
+    private String ubi_nombreorigen;
     private String ubi_nombredestino;
-    
+
     private String vie_codigo;
     private String vfl_codigo;
     private String vfl_nombre;
     private Integer tri_id;
     private Integer pro_id;
-    
+
     private String veh_acople;
     private String veh_flete;
     private String origen_nombre;
@@ -62,11 +62,11 @@ public class Viajes {
     private String ent_nrodocumento;
     private String ent_nombre;
     private String via_descripcion;
-    
+
     private String tri_licencianro;
     private Double via_cantidad;
     private String vie_nombre;
-    
+
     private ErrorEntity errorEntity = null;
 
     public Integer getVia_id() {
@@ -109,8 +109,6 @@ public class Viajes {
         this.veh_idremolque = veh_idremolque;
     }
 
-   
-    
     public Integer getEnt_id() {
         return ent_id;
     }
@@ -430,7 +428,6 @@ public class Viajes {
     public void setVie_nombre(String vie_nombre) {
         this.vie_nombre = vie_nombre;
     }
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;

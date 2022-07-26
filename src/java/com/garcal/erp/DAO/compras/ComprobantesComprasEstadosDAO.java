@@ -22,10 +22,10 @@ import org.apache.commons.dbutils.DbUtils;
  * @author User
  */
 public class ComprobantesComprasEstadosDAO extends ConnectionDB {
-    
-      public static ArrayList<ComprobantesComprasEstados> selectAll(Integer idEmpresa) {
+
+    public static ArrayList<ComprobantesComprasEstados> selectAll(Integer idEmpresa) {
         ArrayList<ComprobantesComprasEstados> comprobantesComprasEstadosArray = new ArrayList<ComprobantesComprasEstados>();
-        
+
         ComprobantesComprasEstados comprobantesComprasEstados = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -63,5 +63,5 @@ public class ComprobantesComprasEstadosDAO extends ConnectionDB {
             return comprobantesComprasEstadosArray;
         }
     }
-    
+
 }

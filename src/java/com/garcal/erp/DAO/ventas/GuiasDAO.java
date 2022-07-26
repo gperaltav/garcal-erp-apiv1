@@ -24,8 +24,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class GuiasDAO extends ConnectionDB{
-    
+public class GuiasDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(Guias guias) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
@@ -55,7 +55,7 @@ public class GuiasDAO extends ConnectionDB{
             System.out.println(varSql);
             varPst = varConn.prepareStatement(varSql);
             varPst.setInt(1, guias.getEmp_id());
-            varPst.setDate(2,Utility.getStringToDate( guias.getGui_fechaemision()));
+            varPst.setDate(2, Utility.getStringToDate(guias.getGui_fechaemision()));
             varPst.setString(3, guias.getGti_codigo());
             varPst.setString(4, guias.getGui_serie());
             varPst.setString(5, guias.getGui_numero());
@@ -125,7 +125,7 @@ public class GuiasDAO extends ConnectionDB{
             varPst = varConn.prepareStatement(varSql);
             varPst.setInt(1, guias.getGui_id());
             varPst.setInt(2, guias.getEmp_id());
-            varPst.setDate(3, Utility.getStringToDate( guias.getGui_fechaemision()));
+            varPst.setDate(3, Utility.getStringToDate(guias.getGui_fechaemision()));
             varPst.setString(4, guias.getGti_codigo());
             varPst.setString(5, guias.getGui_serie());
             varPst.setString(6, guias.getGui_numero());
@@ -219,7 +219,7 @@ public class GuiasDAO extends ConnectionDB{
                 while (varResult.next()) {
                     guias = new Guias();
                     guias.setEmp_id(varResult.getInt("emp_id"));
-                    guias.setGui_fechaemision(Utility.getDateToString( varResult.getDate("gui_fechaemision")));
+                    guias.setGui_fechaemision(Utility.getDateToString(varResult.getDate("gui_fechaemision")));
                     guias.setGti_codigo(varResult.getString("gti_codigo"));
                     guias.setGui_serie(varResult.getString("gui_serie"));
                     guias.setGui_numero(varResult.getString("gui_numero"));
@@ -254,12 +254,11 @@ public class GuiasDAO extends ConnectionDB{
 
         }
     }
-    
-    
-     public static ArrayList<Guias> selectGuias(Guias guias) {
+
+    public static ArrayList<Guias> selectGuias(Guias guias) {
 
         ArrayList<Guias> guiasArray = new ArrayList<Guias>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -311,9 +310,8 @@ public class GuiasDAO extends ConnectionDB{
             return guiasArray;
         }
     }
-    
 
-      public static ArrayList<Guias> selectAll() {
+    public static ArrayList<Guias> selectAll() {
         Guias guias = new Guias();
         guias.setEmp_id(0);
         guias.setGti_codigo("");

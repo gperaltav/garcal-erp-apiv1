@@ -288,6 +288,4 @@ public class Entidad {
         this.ent_condicioncontribuyente = ent_condicioncontribuyente;
     }
 
-  
-
 }

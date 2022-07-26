@@ -12,12 +12,12 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class ComprobantesComprasEstados {
-    
+
     private Integer emp_id;
     private String cce_codigo;
     private String cce_descripcion;
-    private String cce_usucreacion;      
-    
+    private String cce_usucreacion;
+
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
@@ -59,7 +59,5 @@ public class ComprobantesComprasEstados {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-    
+
 }

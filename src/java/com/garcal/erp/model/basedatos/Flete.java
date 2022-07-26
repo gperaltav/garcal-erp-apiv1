@@ -40,7 +40,5 @@ public class Flete {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-    
+
 }

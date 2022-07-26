@@ -17,13 +17,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import org.apache.commons.dbutils.DbUtils;
 
-
 /**
  *
  * @author usuario
  */
-public class VehiculosPendientesViajesDAO  extends ConnectionDB{
-    
+public class VehiculosPendientesViajesDAO extends ConnectionDB {
+
     public static ArrayList<VehiculosPendientesViajes> selectVehiculosPendientesViajes(VehiculosPendientesViajes vehiculosPendientesViajes) {
 
         ArrayList<VehiculosPendientesViajes> vehiculosPendientesViajesArray = new ArrayList<VehiculosPendientesViajes>();
@@ -47,7 +46,7 @@ public class VehiculosPendientesViajesDAO  extends ConnectionDB{
             varPst.setString(2, vehiculosPendientesViajes.getVeh_placa());
             varPst.setString(3, vehiculosPendientesViajes.getVcl_id());
             varPst.setDate(4, vehiculosPendientesViajes.getVia_fechaviaje());
-             varPst.setTime(5, Utility.getStringToTime(vehiculosPendientesViajes.getVia_horaviaje()));
+            varPst.setTime(5, Utility.getStringToTime(vehiculosPendientesViajes.getVia_horaviaje()));
             varResult = varPst.executeQuery();
             if (varResult != null) {
                 while (varResult.next()) {
@@ -73,5 +72,5 @@ public class VehiculosPendientesViajesDAO  extends ConnectionDB{
             return vehiculosPendientesViajesArray;
         }
     }
-    
+
 }

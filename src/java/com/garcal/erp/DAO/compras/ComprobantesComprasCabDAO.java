@@ -21,9 +21,9 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesComprasCabDAO extends ConnectionDB{
-    
-     public static ResponseAnswer insert(ComprobantesComprasCab comprobantesComprascab) {
+public class ComprobantesComprasCabDAO extends ConnectionDB {
+
+    public static ResponseAnswer insert(ComprobantesComprasCab comprobantesComprascab) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -75,17 +75,17 @@ public class ComprobantesComprasCabDAO extends ConnectionDB{
             varPst.setString(10, comprobantesComprascab.getCce_codigo());
             varPst.setString(11, comprobantesComprascab.getMon_codigo());
             varPst.setString(12, comprobantesComprascab.getCcc_observaciones());
-            varPst.setObject(13, comprobantesComprascab.getCcc_idreferencia(),Types.INTEGER);
+            varPst.setObject(13, comprobantesComprascab.getCcc_idreferencia(), Types.INTEGER);
             varPst.setDouble(14, comprobantesComprascab.getCcc_tipocambio());
             varPst.setBoolean(15, comprobantesComprascab.getCcc_generamovimiento());
             varPst.setDate(16, Utility.getStringToDate(comprobantesComprascab.getCcc_fechaingreso()));
             varPst.setDate(17, comprobantesComprascab.getCcc_periodoregistro());
             varPst.setString(18, comprobantesComprascab.getUsu_codigo());
             varPst.setString(19, comprobantesComprascab.getCcc_usucreacion());
-            varPst.setObject(20, comprobantesComprascab.getPro_id(),Types.INTEGER);
-            varPst.setObject(21, comprobantesComprascab.getVia_id(),Types.INTEGER);
-            varPst.setObject(22, comprobantesComprascab.getVeh_id(),Types.INTEGER);
-            varPst.setObject(23, comprobantesComprascab.getTra_id(),Types.INTEGER);
+            varPst.setObject(20, comprobantesComprascab.getPro_id(), Types.INTEGER);
+            varPst.setObject(21, comprobantesComprascab.getVia_id(), Types.INTEGER);
+            varPst.setObject(22, comprobantesComprascab.getVeh_id(), Types.INTEGER);
+            varPst.setObject(23, comprobantesComprascab.getTra_id(), Types.INTEGER);
             varPst.setString(24, comprobantesComprascab.getCcd_serie());
             varPst.setDouble(25, comprobantesComprascab.getCcd_cantidad());
             varPst.setDouble(26, comprobantesComprascab.getCcd_preciounitario());
@@ -115,7 +115,7 @@ public class ComprobantesComprasCabDAO extends ConnectionDB{
 
     }
 
-     public static ResponseAnswer delete(Integer id) {
+    public static ResponseAnswer delete(Integer id) {
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -150,8 +150,8 @@ public class ComprobantesComprasCabDAO extends ConnectionDB{
             return postResponse;
         }
     }
-     
-      public static ResponseAnswer update(ComprobantesComprasCab comprobantesComprascab) {
+
+    public static ResponseAnswer update(ComprobantesComprasCab comprobantesComprascab) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -166,7 +166,7 @@ public class ComprobantesComprasCabDAO extends ConnectionDB{
             System.out.println(varSql);
             varPst = varConn.prepareStatement(varSql);
             varPst.setInt(1, comprobantesComprascab.getCcc_id());
-            varPst.setString(2,  comprobantesComprascab.getCce_codigo());
+            varPst.setString(2, comprobantesComprascab.getCce_codigo());
             varPst.executeQuery();
             varPst.close();
 
@@ -190,5 +190,5 @@ public class ComprobantesComprasCabDAO extends ConnectionDB{
         }
 
     }
-     
+
 }

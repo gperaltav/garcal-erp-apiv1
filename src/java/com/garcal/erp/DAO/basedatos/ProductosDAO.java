@@ -115,8 +115,7 @@ public class ProductosDAO extends ConnectionDB {
         }
 
     }
-   
-    
+
     public static ArrayList<Productos> selectFilterName(Productos productos) {
         ArrayList<Productos> productosArray = new ArrayList<Productos>();
         // Trabajadores trabajadores = null;
@@ -165,7 +164,7 @@ public class ProductosDAO extends ConnectionDB {
         }
 
     }
-    
+
     public static ResponseAnswer insert(Productos productos) {
         ResponseAnswer postResponse = null;
 
@@ -316,6 +315,5 @@ public class ProductosDAO extends ConnectionDB {
             return postResponse;
         }
     }
- 
 
 }

@@ -20,9 +20,9 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesVentasCobrosDAO extends ConnectionDB{
-    
-     public static ResponseAnswer insert(ComprobantesVentasCobros comprobantesventascobros) {
+public class ComprobantesVentasCobrosDAO extends ConnectionDB {
+
+    public static ResponseAnswer insert(ComprobantesVentasCobros comprobantesventascobros) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -77,5 +77,4 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
 
     }
 
-    
 }

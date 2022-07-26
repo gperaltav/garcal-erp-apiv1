@@ -7,13 +7,12 @@ package com.garcal.erp.model.planificacionviajes;
 
 import com.garcal.erp.model.ErrorEntity;
 
-
 /**
  *
  * @author usuario
  */
 public class TripulacionOperarioDocumentos {
-    
+
     private Integer emp_id;
     private String tra_nrodocumento;
     private String tri_licencianro;
@@ -61,7 +60,6 @@ public class TripulacionOperarioDocumentos {
         this.tra_id = tra_id;
     }
 
-   
     public ErrorEntity getErrorEntity() {
         return errorEntity;
     }
@@ -69,6 +67,5 @@ public class TripulacionOperarioDocumentos {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
+
 }

@@ -24,12 +24,12 @@ import javax.ws.rs.core.Response;
 @Path("comprobantescomprascab")
 
 public class ComprobantesComprasCabResource {
-    
+
     @POST
     @Path("nuevo")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response postJson(ComprobantesComprasCab comprobantesComprascab ){
+    public Response postJson(ComprobantesComprasCab comprobantesComprascab) {
         /* ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
          Validator validator = factory.getValidator();
          validator.validate(business);
@@ -49,7 +49,8 @@ public class ComprobantesComprasCabResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
-     @POST
+
+    @POST
     @Path("borra")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -62,7 +63,8 @@ public class ComprobantesComprasCabResource {
                 .entity(new Gson().toJson(postResponse))
                 .build();
     }
-      @POST
+
+    @POST
     @Path("actualizar")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})

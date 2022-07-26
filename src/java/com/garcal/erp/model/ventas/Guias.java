@@ -13,7 +13,7 @@ import java.sql.Date;
  * @author User
  */
 public class Guias {
-    
+
     private Integer emp_id;
     private String gui_fechaemision;//time
     private String gti_codigo;
@@ -34,25 +34,20 @@ public class Guias {
     private String gui_serienumero;
     private Date gui_fechaemision_inicio;
     private Date gui_fechaemision_fin;
-    
+
     private String gti_descripcion;
     private String emp_razonsocial;
     private String veh_placa;
     private String via_descripcion;
-    
-            
-            
-    
-    private ErrorEntity errorEntity = null
-            
-            ;
+
+    private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
         return emp_id;
     }
 
     public void setEmp_id(Integer emp_id) {
-        
+
         this.emp_id = emp_id;
     }
 
@@ -64,8 +59,6 @@ public class Guias {
         this.gui_fechaemision = gui_fechaemision;
     }
 
-   
-    
     public String getGti_codigo() {
         return gti_codigo;
     }
@@ -94,10 +87,10 @@ public class Guias {
         return via_id;
     }
 
-    public void setVia_id(Integer via_id){
-        
-        if(via_id==0){
-            via_id=null;
+    public void setVia_id(Integer via_id) {
+
+        if (via_id == 0) {
+            via_id = null;
         }
         this.via_id = via_id;
     }
@@ -107,11 +100,11 @@ public class Guias {
     }
 
     public void setGui_entdestinatario(Integer gui_entdestinatario) {
-        
-        if(gui_entdestinatario==0){
-            gui_entdestinatario=null;
+
+        if (gui_entdestinatario == 0) {
+            gui_entdestinatario = null;
         }
-        
+
         this.gui_entdestinatario = gui_entdestinatario;
     }
 
@@ -120,9 +113,9 @@ public class Guias {
     }
 
     public void setVeh_id(Integer veh_id) {
-        
-        if(veh_id==0){
-            veh_id=null;
+
+        if (veh_id == 0) {
+            veh_id = null;
         }
         this.veh_id = veh_id;
     }
@@ -140,9 +133,9 @@ public class Guias {
     }
 
     public void setPro_id(Integer pro_id) {
-        
-          if(pro_id==0){
-            pro_id=null;
+
+        if (pro_id == 0) {
+            pro_id = null;
         }
         this.pro_id = pro_id;
     }
@@ -258,7 +251,6 @@ public class Guias {
     public void setVia_descripcion(String via_descripcion) {
         this.via_descripcion = via_descripcion;
     }
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;
@@ -267,7 +259,5 @@ public class Guias {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-    
+
 }

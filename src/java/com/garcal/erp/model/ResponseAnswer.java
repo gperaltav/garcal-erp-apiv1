@@ -15,9 +15,9 @@ public class ResponseAnswer {
     private String message = null;
     private Object error = null;
     private Integer idValue = null;
-    private String idCode=null;
+    private String idCode = null;
     private ErrorEntity errorEntity = null;
-    private Integer ccc_idreferencia=null;
+    private Integer ccc_idreferencia = null;
 
     public ResponseAnswer() {
     }
@@ -59,7 +59,6 @@ public class ResponseAnswer {
         this.idCode = idCode;
     }
 
-    
     public ErrorEntity getErrorEntity() {
         return errorEntity;
     }
@@ -67,7 +66,8 @@ public class ResponseAnswer {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
+
     public void setCcc_idreferencia(Integer ccc_idreferencia) {
-    this.ccc_idreferencia = ccc_idreferencia == 0 ? null : ccc_idreferencia;
-}
+        this.ccc_idreferencia = ccc_idreferencia == 0 ? null : ccc_idreferencia;
+    }
 }

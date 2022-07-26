@@ -12,13 +12,13 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class ComprobantesComprasTipos {
-    
+
     private Integer emp_id;
     private String cct_codigo;
     private String cct_descripcion;
     private String cct_codigosunat;
-    private String cct_usucreacion;      
-    
+    private String cct_usucreacion;
+
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {

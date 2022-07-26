@@ -21,11 +21,11 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesComprasTiposDAO extends ConnectionDB{
+public class ComprobantesComprasTiposDAO extends ConnectionDB {
 
-       public static ArrayList<ComprobantesComprasTipos> selectAll(Integer idEmpresa) {
+    public static ArrayList<ComprobantesComprasTipos> selectAll(Integer idEmpresa) {
         ArrayList<ComprobantesComprasTipos> comprobantesComprasTiposArray = new ArrayList<ComprobantesComprasTipos>();
-        
+
         ComprobantesComprasTipos comprobantesComprasTipos = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -41,7 +41,7 @@ public class ComprobantesComprasTiposDAO extends ConnectionDB{
             varResult = varPst.executeQuery();
             if (varResult != null) {
                 while (varResult.next()) {
-                     comprobantesComprasTipos = new ComprobantesComprasTipos();
+                    comprobantesComprasTipos = new ComprobantesComprasTipos();
                     comprobantesComprasTipos.setCct_codigo(varResult.getString("cct_codigo"));
                     comprobantesComprasTipos.setCct_descripcion(varResult.getString("cct_descripcion"));
                     comprobantesComprasTipos.setCct_codigosunat(varResult.getString("cct_codigosunat"));
@@ -64,5 +64,5 @@ public class ComprobantesComprasTiposDAO extends ConnectionDB{
             return comprobantesComprasTiposArray;
         }
     }
-    
+
 }

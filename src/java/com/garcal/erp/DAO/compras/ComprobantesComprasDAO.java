@@ -154,11 +154,11 @@ public class ComprobantesComprasDAO extends ConnectionDB {
         }
 
     }
-    
+
     public static ArrayList<ComprobantesComprasCab> selectComprobantesComprasCab(ComprobantesComprasCab comprobantescomprascab) {
 
         ArrayList<ComprobantesComprasCab> comprobantescomprascabArray = new ArrayList<ComprobantesComprasCab>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;

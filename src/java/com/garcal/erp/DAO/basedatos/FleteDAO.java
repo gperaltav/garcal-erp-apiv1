@@ -20,9 +20,9 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author Gloria Peralta <gloria.ypv@gmail.com>
  */
-public class FleteDAO  extends ConnectionDB  {
-    
-      public static ArrayList<Flete> selectAll( ) {
+public class FleteDAO extends ConnectionDB {
+
+    public static ArrayList<Flete> selectAll() {
 
         ArrayList<Flete> fleteArray = new ArrayList<Flete>();
         Flete flete = null;
@@ -60,5 +60,5 @@ public class FleteDAO  extends ConnectionDB  {
             return fleteArray;
         }
     }
-    
+
 }

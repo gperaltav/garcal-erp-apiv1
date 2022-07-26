@@ -60,6 +60,7 @@ public class UsuariosResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
+
     @POST
     @Path("actualizar")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -90,16 +91,15 @@ public class UsuariosResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
     public Response borrarJson(@PathParam("usu_cod") String uid) {
-      ResponseAnswer postResponse = UserDAO.delete(uid);
+        ResponseAnswer postResponse = UserDAO.delete(uid);
         return Response.status(Response.Status.OK)
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
                 .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
                 .header("Access-Control-Allow-Methods", "OPTIONS,POST")
-            //    .entity(new Gson().toJson(postResponse))
+                //    .entity(new Gson().toJson(postResponse))
                 .build();
     }
 
-    
     @GET
     // @Path("{businessid}")
     @Consumes({MediaType.APPLICATION_JSON})
@@ -139,6 +139,7 @@ public class UsuariosResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
+
     @POST
     @Path("filtro")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -153,8 +154,6 @@ public class UsuariosResource {
                 .build();
     }
 
-
-   
     @PUT
     @Consumes("application/json")
     public void putJson(String content) {

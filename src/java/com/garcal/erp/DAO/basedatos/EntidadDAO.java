@@ -281,10 +281,9 @@ public class EntidadDAO extends ConnectionDB {
                     entidad.setFpd_diasvencimiento(varResult.getInt("fdp_diasvencimiento"));
                     entidad.setEnt_estadocontribuyente(varResult.getBoolean("ent_estadocontribuyente"));
                     entidad.setEnt_condicioncontribuyente(varResult.getBoolean("ent_condicioncontribuyente"));
-                    
+
                     entidadArray.add(entidad);
-                    
-                    
+
                 }
             }
         } catch (SQLException e) {
@@ -427,4 +426,3 @@ public class EntidadDAO extends ConnectionDB {
 
     }
 }
-

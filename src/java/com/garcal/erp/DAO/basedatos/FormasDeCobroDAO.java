@@ -21,7 +21,7 @@ import org.apache.commons.dbutils.DbUtils;
  * @author User
  */
 public class FormasDeCobroDAO extends ConnectionDB {
-    
+
     public static ArrayList<FormasDeCobro> selectAll(Integer idEmpresa) {
 
         ArrayList<FormasDeCobro> formasDeCobroArray = new ArrayList<FormasDeCobro>();
@@ -62,5 +62,5 @@ public class FormasDeCobroDAO extends ConnectionDB {
             return formasDeCobroArray;
         }
     }
-    
+
 }

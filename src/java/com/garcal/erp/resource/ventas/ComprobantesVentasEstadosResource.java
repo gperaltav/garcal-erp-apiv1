@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.ventas;
 
-
 import com.garcal.erp.DAO.ventas.ComprobantesVentasEstadosDAO;
 import com.garcal.erp.model.ventas.ComprobantesVentasEstados;
 import com.google.gson.Gson;
@@ -25,9 +24,9 @@ import javax.ws.rs.core.Response;
 @Path("comprobantesventasestados")
 
 public class ComprobantesVentasEstadosResource {
-    
-     @POST
-     @Path("{idEmpresa}")
+
+    @POST
+    @Path("{idEmpresa}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response getJson(@PathParam("idEmpresa") Integer idEmpresa) {
@@ -41,6 +40,5 @@ public class ComprobantesVentasEstadosResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
-    
+
 }

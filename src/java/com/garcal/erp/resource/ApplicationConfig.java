@@ -45,7 +45,6 @@ public class ApplicationConfig extends Application {
         resources.add(com.garcal.erp.resource.basedatos.TrabajadoresResource.class);
         resources.add(com.garcal.erp.resource.basedatos.TripulacionResource.class);
         resources.add(com.garcal.erp.resource.basedatos.UbigeoResource.class);
-        resources.add(com.garcal.erp.resource.basedatos.UserBackResource.class);
         resources.add(com.garcal.erp.resource.basedatos.UsuariosResource.class);
         resources.add(com.garcal.erp.resource.basedatos.VehiculosClasesResource.class);
         resources.add(com.garcal.erp.resource.basedatos.VehiculosMarcasResource.class);

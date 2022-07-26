@@ -12,7 +12,7 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class FormasDeCobro {
-    
+
     private Integer emp_id;
     private String fdc_codigo;
     private String mon_codigo;
@@ -60,7 +60,4 @@ public class FormasDeCobro {
         this.errorEntity = errorEntity;
     }
 
-   
-    
-    
 }

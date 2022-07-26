@@ -221,8 +221,7 @@ public class ViajesDAO extends ConnectionDB {
                     viajes.setPro_descripcion(varResult.getString("pro_descripcion"));
                     viajes.setEnt_nrodocumento(varResult.getString("ent_nrodocumento"));
                     viajes.setEnt_nombre(varResult.getString("ent_nombre"));
-                  
-                    
+
                     viajesArray.add(viajes);
                 }
             }
@@ -261,7 +260,7 @@ public class ViajesDAO extends ConnectionDB {
                     + "? ,"
                     + "? ,"
                     + "? ,"
-                    + "? ,"                  
+                    + "? ,"
                     + "? ,"
                     + "? ,"
                     + "? ,"
@@ -369,7 +368,7 @@ public class ViajesDAO extends ConnectionDB {
         return selectFilter(viajes);
 
     }
-    
+
     public static ResponseAnswer updateCodigo(Viajes viajes) {
 
         ResponseAnswer postResponse = null;
@@ -409,8 +408,8 @@ public class ViajesDAO extends ConnectionDB {
             return postResponse;
         }
     }
-    
-     public static ArrayList<Viajes> selectIDcodigo(Integer idvia) {
+
+    public static ArrayList<Viajes> selectIDcodigo(Integer idvia) {
         ArrayList<Viajes> viajesArray = new ArrayList<Viajes>();
         Viajes viajes = null;
         ResultSet varResult = null;
@@ -447,5 +446,5 @@ public class ViajesDAO extends ConnectionDB {
             return viajesArray;
         }
     }
-    
+
 }

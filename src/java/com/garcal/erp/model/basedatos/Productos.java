@@ -26,7 +26,7 @@ public class Productos {
     private Double pro_precioventa;
     private Double pro_preciocompra;
     private String pro_codsunat;
-    
+
     private String pro_tipouso;
     private String pro_usucreacion;
     private String pro_usumodificacion;
@@ -161,8 +161,5 @@ public class Productos {
     public void setPxt_descripcion(String pxt_descripcion) {
         this.pxt_descripcion = pxt_descripcion;
     }
-    
-    
-    
 
 }

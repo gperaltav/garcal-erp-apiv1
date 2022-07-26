@@ -102,7 +102,7 @@ public class ControlDocumentosVehiculosDAO extends ConnectionDB {
 
                             controlDocumentosVehiculos.setHERMETECIDAD(maps);
                         }
-                         if (varResult.getString("vtd_nombre").equals("MTC MERCANCIAS")) {
+                        if (varResult.getString("vtd_nombre").equals("MTC MERCANCIAS")) {
 
                             controlDocumentosVehiculos.setMTCMERCANCIAS(maps);
                         }

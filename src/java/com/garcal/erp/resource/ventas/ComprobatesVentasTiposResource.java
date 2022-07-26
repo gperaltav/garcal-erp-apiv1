@@ -24,9 +24,9 @@ import javax.ws.rs.core.Response;
 @Path("comprobatesventastipos")
 
 public class ComprobatesVentasTiposResource {
-    
-   @POST
-     @Path("{idEmpresa}")
+
+    @POST
+    @Path("{idEmpresa}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response getJson(@PathParam("idEmpresa") Integer idEmpresa) {

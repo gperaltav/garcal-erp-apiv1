@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.compras;
 
-
 import com.garcal.erp.DAO.compras.ComprobantescomprasEntregardineroPendienteDAO;
 import com.garcal.erp.model.compras.ComprobantescomprasEntregardineroPendiente;
 import com.google.gson.Gson;
@@ -21,12 +20,10 @@ import javax.ws.rs.core.Response;
  *
  * @author usuario
  */
-
 @Path("comprobantescomprasentregardineropendiente")
 
 public class ComprobantescomprasEntregardineroPendienteResource {
-    
-      
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})

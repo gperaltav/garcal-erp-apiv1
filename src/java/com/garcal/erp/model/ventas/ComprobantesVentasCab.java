@@ -13,8 +13,7 @@ import java.sql.Date;
  * @author User
  */
 public class ComprobantesVentasCab {
-  
- 
+
     private Integer emp_id;
     private Integer ent_id;
     private String cvc_serie;
@@ -48,24 +47,22 @@ public class ComprobantesVentasCab {
     private String cvc_serienumero;
     private Date cvc_fechaemisioninicio;
     private Date cvc_fechaemisionfin;
-    
+
     private Integer cvc_id;
     private String emp_razonsocial;
     private String cvt_descripcion;
     private String ent_nombre;
-    
+
     private String cve_descripcion;
     private String cvc_comprobantereferencia;
-    
+
     private String fdc_codigo;
     private String vec_nroreferencia;
     private Date vec_fechacancelacioninicio;
     private Date vec_fechacancelacionfin;
     private String via_descripcion;
 
- 
-    
-  private ErrorEntity errorEntity = null;
+    private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
         return emp_id;
@@ -362,9 +359,5 @@ public class ComprobantesVentasCab {
     public void setVia_descripcion(String via_descripcion) {
         this.via_descripcion = via_descripcion;
     }
-    
 
-   
-    
-    
 }

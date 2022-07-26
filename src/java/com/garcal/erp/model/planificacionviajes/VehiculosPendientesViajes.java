@@ -8,13 +8,12 @@ package com.garcal.erp.model.planificacionviajes;
 import com.garcal.erp.model.ErrorEntity;
 import java.sql.Date;
 
-
 /**
  *
  * @author usuario
  */
 public class VehiculosPendientesViajes {
-    
+
     private Integer veh_id;
     private Integer emp_id;
     private String veh_placa;
@@ -64,7 +63,6 @@ public class VehiculosPendientesViajes {
         this.via_fechaviaje = via_fechaviaje;
     }
 
- 
     public String getVia_horaviaje() {
         return via_horaviaje;
     }
@@ -80,8 +78,5 @@ public class VehiculosPendientesViajes {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-    
-    
+
 }

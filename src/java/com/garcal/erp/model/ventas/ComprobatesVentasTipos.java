@@ -12,15 +12,15 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class ComprobatesVentasTipos {
-    
-      private Integer emp_id;
-      private String cvt_codigo;
-      private String cvt_descripcion;
-      private Integer cvt_maxitems;
-      private String cvt_codigosunat;//char
-      private String cvt_usucreacion;
-      
-      private ErrorEntity errorEntity = null;
+
+    private Integer emp_id;
+    private String cvt_codigo;
+    private String cvt_descripcion;
+    private Integer cvt_maxitems;
+    private String cvt_codigosunat;//char
+    private String cvt_usucreacion;
+
+    private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
         return emp_id;
@@ -29,6 +29,7 @@ public class ComprobatesVentasTipos {
     public void setEmp_id(Integer emp_id) {
         this.emp_id = emp_id;
     }
+
     public String getCvt_codigo() {
         return cvt_codigo;
     }
@@ -76,9 +77,5 @@ public class ComprobatesVentasTipos {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-      
-      
-    
-    
-    
+
 }

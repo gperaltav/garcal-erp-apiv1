@@ -25,14 +25,14 @@ import javax.ws.rs.core.Response;
 public class FleteResource {
 
     @POST
-  //  @Path("{ubi_nombre}")
+    //  @Path("{ubi_nombre}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
     public Response getJson() {
         //TODO return proper representation object
         ArrayList<Flete> detail = FleteDAO.selectAll();
         return Response.status(Response.Status.OK)
-                  .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
                 .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
                 .header("Access-Control-Allow-Methods", "OPTIONS,POST")
                 .entity(new Gson().toJson(detail))

@@ -20,11 +20,11 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author usuario
  */
-public class ComprobantesComprasReferenciaDAO extends ConnectionDB{
-    
-     public static ArrayList<ComprobantesComprasReferencia> selectAll(Integer idEmpresa) {
+public class ComprobantesComprasReferenciaDAO extends ConnectionDB {
+
+    public static ArrayList<ComprobantesComprasReferencia> selectAll(Integer idEmpresa) {
         ArrayList<ComprobantesComprasReferencia> comprobantesComprasReferenciaArray = new ArrayList<ComprobantesComprasReferencia>();
-        
+
         ComprobantesComprasReferencia comprobantesComprasReferencia = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -41,7 +41,7 @@ public class ComprobantesComprasReferenciaDAO extends ConnectionDB{
             if (varResult != null) {
                 while (varResult.next()) {
                     comprobantesComprasReferencia = new ComprobantesComprasReferencia();
-                     comprobantesComprasReferencia.setCcr_codigo(varResult.getString("ccr_codigo"));
+                    comprobantesComprasReferencia.setCcr_codigo(varResult.getString("ccr_codigo"));
                     comprobantesComprasReferencia.setCcr_descripcion(varResult.getString("ccr_descripcion"));
                     comprobantesComprasReferencia.setCcr_usucreacion(varResult.getString("ccr_usucreacion"));
                     comprobantesComprasReferenciaArray.add(comprobantesComprasReferencia);

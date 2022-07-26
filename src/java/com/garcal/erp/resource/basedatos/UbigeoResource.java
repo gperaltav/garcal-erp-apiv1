@@ -49,11 +49,12 @@ public class UbigeoResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
-     @POST
-     @Path("filtro")
+
+    @POST
+    @Path("filtro")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response buscarJsonProveedorGet(Ubigeo ubigeo ) {
+    public Response buscarJsonProveedorGet(Ubigeo ubigeo) {
         ArrayList<Ubigeo> detail = UbigeoDAO.selectFilter(ubigeo);
         return Response.status(Response.Status.OK)
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
@@ -62,7 +63,7 @@ public class UbigeoResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-  
+
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
@@ -70,7 +71,7 @@ public class UbigeoResource {
         //TODO return proper representation object
         ArrayList<Ubigeo> detail = UbigeoDAO.selectAll(ubigeo);
         return Response.status(Response.Status.OK)
-                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
                 .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
                 .header("Access-Control-Allow-Methods", "OPTIONS,POST")
                 .entity(new Gson().toJson(detail))

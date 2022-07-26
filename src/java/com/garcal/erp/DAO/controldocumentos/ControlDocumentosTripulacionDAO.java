@@ -80,7 +80,7 @@ public class ControlDocumentosTripulacionDAO extends ConnectionDB {
     }
 
     public static ArrayList<ControlDocumentosTripulacion> selectID(ControlDocumentosTripulacion controlDocumentosTripulacion) {
-       
+
         ArrayList<ControlDocumentosTripulacion> controlDocumentosTripulacionArray = new ArrayList<ControlDocumentosTripulacion>();
         // ControlDocumentosTripulacion controlDocumentosTripulacion = null;
         ResultSet varResult = null;

@@ -21,11 +21,11 @@ import org.apache.commons.dbutils.DbUtils;
  * @author usuario
  */
 public class ComprobantescomprasEntregardineroPendienteDAO extends ConnectionDB {
-    
-     public static ArrayList<ComprobantescomprasEntregardineroPendiente> selectFiltro(ComprobantescomprasEntregardineroPendiente comprobantescomprasEntregardineroPendiente) {
-        
+
+    public static ArrayList<ComprobantescomprasEntregardineroPendiente> selectFiltro(ComprobantescomprasEntregardineroPendiente comprobantescomprasEntregardineroPendiente) {
+
         ArrayList<ComprobantescomprasEntregardineroPendiente> comprobantescomprasEntregardineroPendienteArray = new ArrayList<ComprobantescomprasEntregardineroPendiente>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -64,5 +64,5 @@ public class ComprobantescomprasEntregardineroPendienteDAO extends ConnectionDB 
             return comprobantescomprasEntregardineroPendienteArray;
         }
     }
-    
+
 }

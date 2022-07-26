@@ -217,6 +217,7 @@ public class UserDAO extends ConnectionDB {
         CallableStatement varCall = null;
         Connection varConn = null;
         try {
+
             varConn = connectionDB();
             String varSql = " SELECT * FROM public.fun_usuario_acceso(?,?) ";
 
@@ -224,26 +225,32 @@ public class UserDAO extends ConnectionDB {
             varPst = varConn.prepareStatement(varSql);
             varPst.setString(1, user.getUsu_codigo());
             varPst.setString(2, user.getUsu_clave());
+            
 
             varResult = varPst.executeQuery();
+            user = new User();
+            user.setUsu_existe(false);
+            userArray.add(user);
             if (varResult != null) {
                 while (varResult.next()) {
+                    userArray = new ArrayList<User>();
                     user = new User();
                     user.setUsu_codigo(varResult.getString("usu_codigo"));
-                    user.setUsu_isexit(true);
+                    user.setUsu_rol(varResult.getString("usu_rol"));
+                    user.setUsu_existe(true);
                     userArray.add(user);
                 }
-            } else {
-                user = new User();
-                user.setUsu_isexit(false);
             }
+
         } catch (SQLException e) {
             user = new User();
+            user.setUsu_existe(false);
             user.setErrorEntity(new ErrorEntity("SQLException", e.getMessage()));
             userArray.add(user);
             e.printStackTrace();
         } catch (Exception e) {
             user = new User();
+            user.setUsu_existe(false);
             user.setErrorEntity(new ErrorEntity("Exception", "" + e));
             userArray.add(user);
             e.printStackTrace();

@@ -23,8 +23,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesVentasCabDAO extends ConnectionDB{
-    
+public class ComprobantesVentasCabDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(ComprobantesVentasCab comprobantesventascab) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
@@ -71,7 +71,7 @@ public class ComprobantesVentasCabDAO extends ConnectionDB{
             varPst.setString(11, comprobantesventascab.getCve_codigo());
             varPst.setString(12, comprobantesventascab.getMon_codigo());
             varPst.setDouble(13, comprobantesventascab.getCve_tipocambio());
-            varPst.setObject(14, comprobantesventascab.getCvc_idreferencia(),Types.INTEGER);
+            varPst.setObject(14, comprobantesventascab.getCvc_idreferencia(), Types.INTEGER);
             varPst.setString(15, comprobantesventascab.getCvc_observaciones());
             varPst.setString(16, comprobantesventascab.getCvc_observacionesopcional());
             varPst.setInt(17, comprobantesventascab.getGui_idremitente());
@@ -183,7 +183,7 @@ public class ComprobantesVentasCabDAO extends ConnectionDB{
         }
 
     }
-    
+
     public static ResponseAnswer delete(Integer id) {
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -219,7 +219,7 @@ public class ComprobantesVentasCabDAO extends ConnectionDB{
             return postResponse;
         }
     }
-     
+
     public static ArrayList<ComprobantesVentasCab> selectID(Integer idcomprobanteventas) {
         ArrayList<ComprobantesVentasCab> comprobantesventascabArray = new ArrayList<ComprobantesVentasCab>();
         ComprobantesVentasCab comprobantesventascab = null;
@@ -279,11 +279,11 @@ public class ComprobantesVentasCabDAO extends ConnectionDB{
 
         }
     }
-     
+
     public static ArrayList<ComprobantesVentasCab> selectComprobantesVentasCab(ComprobantesVentasCab comprobantesVentasCab) {
 
         ArrayList<ComprobantesVentasCab> comprobantesVentasCabArray = new ArrayList<ComprobantesVentasCab>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -342,7 +342,7 @@ public class ComprobantesVentasCabDAO extends ConnectionDB{
             return comprobantesVentasCabArray;
         }
     }
-   
+
     public static ArrayList<ComprobantesVentasCab> selectIDBucar(Integer idcomprobanteventas) {
         ArrayList<ComprobantesVentasCab> comprobantesventascabArray = new ArrayList<ComprobantesVentasCab>();
         ComprobantesVentasCab comprobantesventascab = null;

@@ -19,8 +19,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesComprasDetDAO extends ConnectionDB{
-    
+public class ComprobantesComprasDetDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(ComprobantesComprasDet comprobantescomprasdet) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
@@ -57,7 +57,7 @@ public class ComprobantesComprasDetDAO extends ConnectionDB{
             varPst.setDouble(10, comprobantescomprasdet.getCcd_subtotal());
             varPst.setString(11, comprobantescomprasdet.getUni_unidad());
             varPst.setString(12, comprobantescomprasdet.getCcd_usucreacion());
-          
+
             varPst.executeQuery();
             varPst.close();
 

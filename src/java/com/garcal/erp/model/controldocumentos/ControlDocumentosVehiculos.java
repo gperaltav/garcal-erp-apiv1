@@ -27,7 +27,7 @@ public class ControlDocumentosVehiculos {
     private String vxd_entidademisora;
     private String vxd_fechaemision;
     private String vxd_usucreacion;
-    
+
     private String vcl_nombre;
 
     private List<Map> CITV12m;
@@ -185,7 +185,6 @@ public class ControlDocumentosVehiculos {
     public void setMTCMATPEL(List<Map> MTCMATPEL) {
         this.MTCMATPEL = MTCMATPEL;
     }
-    
 
     public String getVxd_entidademisora() {
         return vxd_entidademisora;
@@ -218,7 +217,6 @@ public class ControlDocumentosVehiculos {
     public void setVcl_nombre(String vcl_nombre) {
         this.vcl_nombre = vcl_nombre;
     }
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;

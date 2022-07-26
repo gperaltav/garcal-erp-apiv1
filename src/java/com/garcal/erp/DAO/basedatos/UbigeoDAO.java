@@ -21,8 +21,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author Gloria Peralta <gloria.ypv@gmail.com>
  */
-public class UbigeoDAO  extends ConnectionDB  {
-    
+public class UbigeoDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(Ubigeo ubigeo) {
         ResponseAnswer postResponse = null;
 
@@ -80,7 +80,8 @@ public class UbigeoDAO  extends ConnectionDB  {
         }
 
     }
-     public static ArrayList<Ubigeo> selectFilter(Ubigeo ubigeo) {
+
+    public static ArrayList<Ubigeo> selectFilter(Ubigeo ubigeo) {
         ArrayList<Ubigeo> ubigeoArray = new ArrayList<Ubigeo>();
         // Trabajadores trabajadores = null;
         ResultSet varResult = null;
@@ -107,7 +108,7 @@ public class UbigeoDAO  extends ConnectionDB  {
                     ubigeo.setUbi_provincianombre(varResult.getString("ubi_provincianombre"));
                     ubigeoArray.add(ubigeo);
                 }
-           
+
             }
 
         } catch (SQLException e) {
@@ -127,11 +128,10 @@ public class UbigeoDAO  extends ConnectionDB  {
 
     }
 
-      
     public static ArrayList<Ubigeo> selectAll(Ubigeo ubigeo) {
 
         ArrayList<Ubigeo> ubigeoArray = new ArrayList<Ubigeo>();
-      //  Ubigeo ubigeo = null;
+        //  Ubigeo ubigeo = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -168,5 +168,5 @@ public class UbigeoDAO  extends ConnectionDB  {
             return ubigeoArray;
         }
     }
-    
+
 }

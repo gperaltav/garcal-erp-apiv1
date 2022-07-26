@@ -204,8 +204,5 @@ public class TripulacionDAO extends ConnectionDB {
             return tripulacionArray;
         }
     }
-    
-    
-    
 
 }

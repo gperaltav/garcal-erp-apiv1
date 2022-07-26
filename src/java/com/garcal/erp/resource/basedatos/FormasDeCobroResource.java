@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.basedatos;
 
-
 import com.garcal.erp.DAO.basedatos.FormasDeCobroDAO;
 import com.garcal.erp.model.basedatos.FormasDeCobro;
 import com.google.gson.Gson;
@@ -24,7 +23,7 @@ import javax.ws.rs.core.Response;
  */
 @Path("formasdecobro")
 public class FormasDeCobroResource {
-    
+
     @GET
     @Path("{idEmpresa}")
     @Consumes({MediaType.APPLICATION_JSON})
@@ -40,5 +39,5 @@ public class FormasDeCobroResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
+
 }

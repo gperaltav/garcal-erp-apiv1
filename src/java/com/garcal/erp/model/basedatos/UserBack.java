@@ -35,12 +35,10 @@ public class UserBack {
     public void setUsu_clave(String usu_clave) {
         this.usu_clave = usu_clave;
     }
-    
+
     @NotNull(message = "Description is compulsory")
     @NotBlank(message = "Description is compulsory")
-    
-  
-    
+
     public ErrorEntity getErrorEntity() {
         return errorEntity;
     }

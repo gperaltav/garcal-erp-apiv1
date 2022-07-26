@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.compras;
 
-
 import com.garcal.erp.DAO.compras.ComprobantesComprasDAO;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.compras.ComprobantesComprasCab;
@@ -26,12 +25,12 @@ import javax.ws.rs.core.Response;
 @Path("comprobantescompras")
 
 public class ComprobantesComprasResource {
-    
+
     @POST
     @Path("nuevo")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response postJson(ComprobantesComprasCab comprobantescomprascab ){
+    public Response postJson(ComprobantesComprasCab comprobantescomprascab) {
         /* ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
          Validator validator = factory.getValidator();
          validator.validate(business);
@@ -51,7 +50,7 @@ public class ComprobantesComprasResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -64,5 +63,5 @@ public class ComprobantesComprasResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
+
 }

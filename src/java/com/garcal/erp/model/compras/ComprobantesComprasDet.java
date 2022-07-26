@@ -74,7 +74,7 @@ public class ComprobantesComprasDet {
     }
 
     public void setTra_id(Integer tra_id) {
-        this.tra_id =tra_id == 0 ? null :tra_id;
+        this.tra_id = tra_id == 0 ? null : tra_id;
     }
 
     public String getCcd_serie() {

@@ -13,7 +13,7 @@ import java.sql.Date;
  * @author User
  */
 public class ComprobantesVentasCobros {
-    
+
     private Integer emp_id;
     private Integer vec_id;
     private Integer cvc_id;
@@ -23,9 +23,8 @@ public class ComprobantesVentasCobros {
     private String vec_fechacancelacion;
     private String vec_descripcion;
     private String mon_codigo;
-    private String vec_usucreacion;      
-    
-  
+    private String vec_usucreacion;
+
     private String vec_fechacancelacioninicio;
     private String vec_fechacancelacionfin;
 
@@ -44,7 +43,7 @@ public class ComprobantesVentasCobros {
     private String ent_nombre;
     private Double cvc_total;
     private String via_descripcion;
-     
+
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
@@ -70,7 +69,7 @@ public class ComprobantesVentasCobros {
     public void setCvc_id(Integer cvc_id) {
         this.cvc_id = cvc_id;
     }
-   
+
     public String getFdc_codigo() {
         return fdc_codigo;
     }
@@ -262,8 +261,6 @@ public class ComprobantesVentasCobros {
     public void setVia_descripcion(String via_descripcion) {
         this.via_descripcion = via_descripcion;
     }
-    
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;
@@ -272,6 +269,5 @@ public class ComprobantesVentasCobros {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
+
 }

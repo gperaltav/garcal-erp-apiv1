@@ -26,9 +26,8 @@ import javax.ws.rs.core.Response;
 @Path("productos")
 public class ProductosResource {
 
-    
     @POST
-    
+
     @Path("buscarnombre")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -42,8 +41,7 @@ public class ProductosResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
-    
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -56,7 +54,7 @@ public class ProductosResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
+
     @GET
     @Path("{idEmpresa}")
     @Consumes({MediaType.APPLICATION_JSON})
@@ -136,7 +134,5 @@ public class ProductosResource {
                 .entity(new Gson().toJson(postResponse))
                 .build();
     }
-
-    
 
 }

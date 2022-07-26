@@ -20,11 +20,11 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobatesVentasTiposDAO extends ConnectionDB{
-   
+public class ComprobatesVentasTiposDAO extends ConnectionDB {
+
     public static ArrayList<ComprobatesVentasTipos> selectAll(Integer idEmpresa) {
         ArrayList<ComprobatesVentasTipos> comprobatesVentasTiposArray = new ArrayList<ComprobatesVentasTipos>();
-        
+
         ComprobatesVentasTipos comprobatesVentasTipos = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -64,5 +64,5 @@ public class ComprobatesVentasTiposDAO extends ConnectionDB{
             return comprobatesVentasTiposArray;
         }
     }
-    
+
 }

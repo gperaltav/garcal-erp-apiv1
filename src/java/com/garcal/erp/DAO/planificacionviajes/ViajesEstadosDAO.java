@@ -20,10 +20,11 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ViajesEstadosDAO extends ConnectionDB{
+public class ViajesEstadosDAO extends ConnectionDB {
+
     public static ArrayList<ViajesEstados> selectAll(Integer idEmpresa) {
         ArrayList<ViajesEstados> viajesEstadosArray = new ArrayList<ViajesEstados>();
-        
+
         ViajesEstados viajesEstados = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -61,5 +62,5 @@ public class ViajesEstadosDAO extends ConnectionDB{
             return viajesEstadosArray;
         }
     }
-    
+
 }

@@ -5,8 +5,6 @@
  */
 package com.garcal.erp.resource.planificacionviajes;
 
-
-
 import com.garcal.erp.DAO.planificacionviajes.ViajesEstadosDAO;
 import com.garcal.erp.model.planificacionviajes.ViajesEstados;
 import com.google.gson.Gson;
@@ -26,7 +24,7 @@ import javax.ws.rs.core.Response;
 @Path("viajesestados")
 
 public class ViajesEstadosResource {
-    
+
     @GET
     @Path("{idEmpresa}")
     // @Path("{businessid}")

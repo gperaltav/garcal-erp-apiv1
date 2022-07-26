@@ -22,8 +22,7 @@ import org.apache.commons.dbutils.DbUtils;
  * @author usuario
  */
 public class TripulacionPendientesViajesDAO extends ConnectionDB {
-    
-    
+
     public static ArrayList<TripulacionPendientesViajes> selectTripulacionPendientesViajes(TripulacionPendientesViajes tripulacionPendientesViajes) {
 
         ArrayList<TripulacionPendientesViajes> tripulacionPendientesViajesArray = new ArrayList<TripulacionPendientesViajes>();
@@ -49,8 +48,8 @@ public class TripulacionPendientesViajesDAO extends ConnectionDB {
             varPst.setString(3, tripulacionPendientesViajes.getTri_licencianro());
             varPst.setString(4, tripulacionPendientesViajes.getTra_nombre());
             varPst.setDate(5, tripulacionPendientesViajes.getVia_fechaviaje());
-             varPst.setTime(6, Utility.getStringToTime(tripulacionPendientesViajes.getVia_horaviaje()));
-             
+            varPst.setTime(6, Utility.getStringToTime(tripulacionPendientesViajes.getVia_horaviaje()));
+
             varResult = varPst.executeQuery();
             if (varResult != null) {
                 while (varResult.next()) {
@@ -78,5 +77,5 @@ public class TripulacionPendientesViajesDAO extends ConnectionDB {
             return tripulacionPendientesViajesArray;
         }
     }
-    
+
 }

@@ -23,7 +23,7 @@ import org.apache.commons.dbutils.DbUtils;
  * @author usuario
  */
 public class TripulacionOperarioDocumentosDAO extends ConnectionDB {
-    
+
     public static ArrayList<TripulacionOperarioDocumentos> selectTripulacionOperarioDocumentos(TripulacionOperarioDocumentos tripulacionOperarioDocumentos) {
 
         ArrayList<TripulacionOperarioDocumentos> tripulacionOperarioDocumentosArray = new ArrayList<TripulacionOperarioDocumentos>();
@@ -73,5 +73,5 @@ public class TripulacionOperarioDocumentosDAO extends ConnectionDB {
             return tripulacionOperarioDocumentosArray;
         }
     }
-    
+
 }

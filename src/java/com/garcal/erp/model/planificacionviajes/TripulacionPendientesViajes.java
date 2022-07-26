@@ -13,14 +13,14 @@ import java.sql.Date;
  * @author usuario
  */
 public class TripulacionPendientesViajes {
-    
+
     private Integer emp_id;
     private String tra_nrodocumento;
     private String tri_licencianro;
     private String tra_nombre;
     private Date via_fechaviaje;
     private String via_horaviaje;
-    
+
     private Integer tri_id;
 
     private ErrorEntity errorEntity = null;
@@ -80,7 +80,6 @@ public class TripulacionPendientesViajes {
     public void setVia_horaviaje(String via_horaviaje) {
         this.via_horaviaje = via_horaviaje;
     }
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;
@@ -89,10 +88,5 @@ public class TripulacionPendientesViajes {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-     
-    
-     
-     
-     
-    
+
 }

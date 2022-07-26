@@ -22,8 +22,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesComprasPagosDAO extends ConnectionDB{
-    
+public class ComprobantesComprasPagosDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(ComprobantesComprasPagos comprobantesComprasPagos) {
         ResponseAnswer postResponse = null;
         String nroServicio = null;
@@ -224,11 +224,11 @@ public class ComprobantesComprasPagosDAO extends ConnectionDB{
             return comprobantesComprasPagosArray;
         }
     }
-    
+
     public static ArrayList<ComprobantesComprasPagos> selectFiltro(ComprobantesComprasPagos comprobantesComprasPagos) {
-        
+
         ArrayList<ComprobantesComprasPagos> comprobantesComprasPagosArray = new ArrayList<ComprobantesComprasPagos>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -260,7 +260,7 @@ public class ComprobantesComprasPagosDAO extends ConnectionDB{
                     comprobantesComprasPagos.setCcp_id(varResult.getInt("ccp_id"));
                     comprobantesComprasPagos.setCcc_id(varResult.getInt("ccc_id"));
                     comprobantesComprasPagos.setEmp_razonsocial(varResult.getString("emp_razonsocial"));
-                    comprobantesComprasPagos.setCcc_fechaemision (Utility.getDateToString(varResult.getDate("ccc_fechaemision")));
+                    comprobantesComprasPagos.setCcc_fechaemision(Utility.getDateToString(varResult.getDate("ccc_fechaemision")));
                     comprobantesComprasPagos.setCct_codigo(varResult.getString("cct_codigo"));
                     comprobantesComprasPagos.setCct_descripcion(varResult.getString("cct_descripcion"));
                     comprobantesComprasPagos.setCcc_serienumero(varResult.getString("ccc_serienumero"));
@@ -296,5 +296,5 @@ public class ComprobantesComprasPagosDAO extends ConnectionDB{
             return comprobantesComprasPagosArray;
         }
     }
-    
+
 }

@@ -117,6 +117,7 @@ public class ViajesResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
+
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -129,6 +130,7 @@ public class ViajesResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
+
     @POST
     @Path("actualizarcodigo")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -153,6 +155,7 @@ public class ViajesResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
+
     @POST
     @Path("codigo/{via_id}")
     @Consumes(MediaType.APPLICATION_JSON)

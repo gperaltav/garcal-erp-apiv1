@@ -18,7 +18,7 @@ public class Utility {
 
     public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public static SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm aa");
-     public static SimpleDateFormat timeFormat2 = new SimpleDateFormat("HH:mm:ss");
+    public static SimpleDateFormat timeFormat2 = new SimpleDateFormat("HH:mm:ss");
 
     public static String getDateToString(Date date) {
         if (date == null) {
@@ -67,8 +67,8 @@ public class Utility {
         }
 
     }
-    
-       public static String getTimeToString2(java.sql.Time time) {
+
+    public static String getTimeToString2(java.sql.Time time) {
         if (time == null) {
             return null;
         } else {

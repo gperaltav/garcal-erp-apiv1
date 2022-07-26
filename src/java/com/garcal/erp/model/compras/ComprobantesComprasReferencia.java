@@ -12,7 +12,7 @@ import com.garcal.erp.model.ErrorEntity;
  * @author usuario
  */
 public class ComprobantesComprasReferencia {
- 
+
     private Integer emp_id;
     private String ccr_codigo;
     private String ccr_descripcion;
@@ -60,5 +60,4 @@ public class ComprobantesComprasReferencia {
         this.errorEntity = errorEntity;
     }
 
-    
 }

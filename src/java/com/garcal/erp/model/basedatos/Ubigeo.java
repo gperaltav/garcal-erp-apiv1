@@ -22,9 +22,9 @@ public class Ubigeo {
     private String ubi_departamentonombre;
     private String ubi_provincianombre;
     private String ubi_usucreacion;
-                                                    
+
     private ErrorEntity errorEntity = null;
-    
+
     public String getUbi_codigo() {
         return ubi_codigo;
     }
@@ -96,7 +96,6 @@ public class Ubigeo {
     public void setUbi_usucreacion(String ubi_usucreacion) {
         this.ubi_usucreacion = ubi_usucreacion;
     }
-    
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;

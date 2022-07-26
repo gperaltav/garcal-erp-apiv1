@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.ventas;
 
-
 import com.garcal.erp.DAO.ventas.ComprobantesVentasCobrosDAO;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.ventas.ComprobantesVentasCobros;
@@ -23,7 +22,7 @@ import javax.ws.rs.core.Response;
  */
 @Path("comprobantesventacobros")
 public class ComprobantesVentasCobrosResource {
-    
+
     @POST
     @Path("nuevo")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -48,5 +47,5 @@ public class ComprobantesVentasCobrosResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
-    
+
 }

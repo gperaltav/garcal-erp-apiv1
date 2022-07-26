@@ -20,8 +20,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesVentasEstadosDAO extends ConnectionDB{
-    
+public class ComprobantesVentasEstadosDAO extends ConnectionDB {
+
     public static ArrayList<ComprobantesVentasEstados> selectAll(Integer idEmpresa) {
 
         ArrayList<ComprobantesVentasEstados> comprobantesVentasEstadosArray = new ArrayList<ComprobantesVentasEstados>();
@@ -40,7 +40,7 @@ public class ComprobantesVentasEstadosDAO extends ConnectionDB{
             varResult = varPst.executeQuery();
             if (varResult != null) {
                 while (varResult.next()) {
-                     comprobantesVentasEstados = new ComprobantesVentasEstados();
+                    comprobantesVentasEstados = new ComprobantesVentasEstados();
                     comprobantesVentasEstados.setCve_codigo(varResult.getString("cve_codigo"));
                     comprobantesVentasEstados.setCve_descripcion(varResult.getString("cve_descripcion"));
                     comprobantesVentasEstados.setCve_usucreacion(varResult.getString("cve_usucreacion"));
@@ -62,5 +62,5 @@ public class ComprobantesVentasEstadosDAO extends ConnectionDB{
             return comprobantesVentasEstadosArray;
         }
     }
-    
+
 }

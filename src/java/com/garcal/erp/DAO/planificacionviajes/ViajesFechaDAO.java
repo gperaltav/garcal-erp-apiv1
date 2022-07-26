@@ -22,7 +22,8 @@ import org.apache.commons.dbutils.DbUtils;
  * @author User
  */
 public class ViajesFechaDAO extends ConnectionDB {
-     public static ArrayList<Viajes> selectViajesFecha(Viajes viajesfecha) {
+
+    public static ArrayList<Viajes> selectViajesFecha(Viajes viajesfecha) {
 
         ArrayList<Viajes> viajesfechaArray = new ArrayList<Viajes>();
         //VehiculosPendientesViajes vehiculosPendientesViajes = null;
@@ -39,9 +40,8 @@ public class ViajesFechaDAO extends ConnectionDB {
             System.out.println(varSql);
             varPst = varConn.prepareStatement(varSql);
             varPst.setInt(1, viajesfecha.getEmp_id());
-            varPst.setDate(2,Utility.getStringToDate(viajesfecha.getVia_fechaviaje()));
-      
-             
+            varPst.setDate(2, Utility.getStringToDate(viajesfecha.getVia_fechaviaje()));
+
             varResult = varPst.executeQuery();
             if (varResult != null) {
                 while (varResult.next()) {
@@ -70,6 +70,5 @@ public class ViajesFechaDAO extends ConnectionDB {
             return viajesfechaArray;
         }
     }
-    
-    
+
 }

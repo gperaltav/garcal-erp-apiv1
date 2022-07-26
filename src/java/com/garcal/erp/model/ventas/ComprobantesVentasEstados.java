@@ -12,13 +12,13 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class ComprobantesVentasEstados {
-    
-      private Integer emp_id;
-      private String cve_codigo;
-      private String cve_descripcion;
-      private String cve_usucreacion;
-      
-      private ErrorEntity errorEntity = null;
+
+    private Integer emp_id;
+    private String cve_codigo;
+    private String cve_descripcion;
+    private String cve_usucreacion;
+
+    private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
         return emp_id;
@@ -59,6 +59,5 @@ public class ComprobantesVentasEstados {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-      
+
 }

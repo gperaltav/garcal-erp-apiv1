@@ -193,7 +193,5 @@ public class RutasDAO extends ConnectionDB {
             return rutasArray;
         }
     }
-    
- 
 
 }

@@ -12,13 +12,11 @@ import com.garcal.erp.model.ErrorEntity;
  * @author User
  */
 public class ViajesEstados {
-    
+
     private String vie_codigo;
     private String vie_nombre;
     private String vie_usucreacion;
     private ErrorEntity errorEntity = null;
-
-    
 
     public String getVie_codigo() {
         return vie_codigo;
@@ -51,7 +49,5 @@ public class ViajesEstados {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
 
 }

@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.resource.ventas;
 
-
 import com.garcal.erp.DAO.ventas.ComprobantesVentasCabDAO;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.ventas.ComprobantesVentasCab;
@@ -25,12 +24,12 @@ import javax.ws.rs.core.Response;
  */
 @Path("comprobantesventacab")
 public class ComprobantesVentasCabResource {
-    
+
     @POST
     @Path("nuevo")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response postJson(ComprobantesVentasCab comprobantesventacab ){
+    public Response postJson(ComprobantesVentasCab comprobantesventacab) {
         /* ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
          Validator validator = factory.getValidator();
          validator.validate(business);
@@ -50,8 +49,8 @@ public class ComprobantesVentasCabResource {
          .entity(new Gson().toJson(postResponse))
          .build();*/
     }
-    
-      @POST
+
+    @POST
     @Path("actualizar")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
@@ -103,12 +102,11 @@ public class ComprobantesVentasCabResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
-      
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response buscarJsonProveedorGet(ComprobantesVentasCab comprobantesventacab ) {
+    public Response buscarJsonProveedorGet(ComprobantesVentasCab comprobantesventacab) {
         ArrayList<ComprobantesVentasCab> detail = ComprobantesVentasCabDAO.selectComprobantesVentasCab(comprobantesventacab);
         return Response.status(Response.Status.OK)
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
@@ -117,5 +115,5 @@ public class ComprobantesVentasCabResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-  
+
 }

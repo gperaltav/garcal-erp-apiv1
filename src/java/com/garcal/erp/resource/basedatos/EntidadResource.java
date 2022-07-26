@@ -147,12 +147,12 @@ public class EntidadResource {
                 .entity(new Gson().toJson(detail))
                 .build();
     }
-    
+
     @POST
     @Path("buscarentidadnumero")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON})
-    public Response buscarNumero( Entidad entidad) {
+    public Response buscarNumero(Entidad entidad) {
         //entidad.setExt_id("cli");
         ArrayList<Entidad> detail = EntidadDAO.selectFilterNumber(entidad);
         return Response.status(Response.Status.OK)

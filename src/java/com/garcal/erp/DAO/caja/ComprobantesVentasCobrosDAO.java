@@ -11,7 +11,6 @@ import com.garcal.erp.model.ErrorEntity;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.caja.ComprobantesVentasCobros;
 
-
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,8 +23,8 @@ import org.apache.commons.dbutils.DbUtils;
  *
  * @author User
  */
-public class ComprobantesVentasCobrosDAO extends ConnectionDB{
-    
+public class ComprobantesVentasCobrosDAO extends ConnectionDB {
+
     public static ResponseAnswer insert(ComprobantesVentasCobros comprobantesVentasCobros) {
         ResponseAnswer postResponse = null;
         String nroServicio = null;
@@ -56,7 +55,7 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
             varPst.setString(5, comprobantesVentasCobros.getVec_nroreferencia());
             varPst.setDate(6, Utility.getStringToDate(comprobantesVentasCobros.getVec_fechacancelacion()));
             varPst.setString(7, comprobantesVentasCobros.getVec_descripcion());
-             varPst.setDouble(8, comprobantesVentasCobros.getVec_tipocambio());
+            varPst.setDouble(8, comprobantesVentasCobros.getVec_tipocambio());
             varPst.setString(9, comprobantesVentasCobros.getMon_codigo());
             varPst.setString(10, comprobantesVentasCobros.getVec_usucreacion());
             varPst.executeQuery();
@@ -83,8 +82,8 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
         }
 
     }
-   
-    public static ResponseAnswer update(ComprobantesVentasCobros comprobantesVentasCobros ) {
+
+    public static ResponseAnswer update(ComprobantesVentasCobros comprobantesVentasCobros) {
         ResponseAnswer postResponse = null;
 
         ResultSet varResult = null;
@@ -108,7 +107,7 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
                     + " ) ";
             System.out.println(varSql);
             varPst = varConn.prepareStatement(varSql);
-             varPst.setInt(1, comprobantesVentasCobros.getVec_id());
+            varPst.setInt(1, comprobantesVentasCobros.getVec_id());
             varPst.setInt(2, comprobantesVentasCobros.getEmp_id());
             varPst.setInt(3, comprobantesVentasCobros.getCvc_id());
             varPst.setString(4, comprobantesVentasCobros.getFdc_codigo());
@@ -177,11 +176,11 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
             DbUtils.closeQuietly(varConn, varPst, varResult);
             return postResponse;
         }
-    } 
-    
+    }
+
     public static ArrayList<ComprobantesVentasCobros> selectID(Integer idvec) {
         ArrayList<ComprobantesVentasCobros> comprobantesVentasCobrosArray = new ArrayList<ComprobantesVentasCobros>();
-        ComprobantesVentasCobros  comprobantesVentasCobros= null;
+        ComprobantesVentasCobros comprobantesVentasCobros = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;
@@ -225,11 +224,11 @@ public class ComprobantesVentasCobrosDAO extends ConnectionDB{
             return comprobantesVentasCobrosArray;
         }
     }
-    
+
     public static ArrayList<ComprobantesVentasCobros> selectFiltro(ComprobantesVentasCobros comprobantesVentasCobros) {
-        
+
         ArrayList<ComprobantesVentasCobros> comprobantesVentasCobrosArray = new ArrayList<ComprobantesVentasCobros>();
-        
+
         ResultSet varResult = null;
         PreparedStatement varPst = null;
         CallableStatement varCall = null;

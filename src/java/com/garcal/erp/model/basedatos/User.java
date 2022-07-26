@@ -23,7 +23,8 @@ public class User {
     private String usu_direccion;
     private String usu_usucreacion;
     private String uusmodifi;
-    private Boolean usu_isexit;
+    private Boolean usu_existe;
+    private String usu_rol;
 
     private ErrorEntity errorEntity = null;
 
@@ -107,14 +108,21 @@ public class User {
         this.uusmodifi = uusmodifi;
     }
 
-    public Boolean getUsu_isexit() {
-        return usu_isexit;
+    public Boolean getUsu_existe() {
+        return usu_existe;
     }
 
-    public void setUsu_isexit(Boolean usu_isexit) {
-        this.usu_isexit = usu_isexit;
+    public void setUsu_existe(Boolean usu_existe) {
+        this.usu_existe = usu_existe;
     }
-    
+
+    public String getUsu_rol() {
+        return usu_rol;
+    }
+
+    public void setUsu_rol(String usu_rol) {
+        this.usu_rol = usu_rol;
+    }
 
     public ErrorEntity getErrorEntity() {
         return errorEntity;
@@ -123,9 +131,5 @@ public class User {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-
-   
 
 }

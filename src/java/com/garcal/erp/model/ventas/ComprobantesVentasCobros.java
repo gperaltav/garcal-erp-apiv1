@@ -13,7 +13,7 @@ import java.sql.Date;
  * @author User
  */
 public class ComprobantesVentasCobros {
-    
+
     private Integer emp_id;
     private Integer cvc_id;
     private String fdc_codigo;
@@ -24,7 +24,7 @@ public class ComprobantesVentasCobros {
     private String mon_codigo;
     private String vec_usucreacion;
     private String vec_feccreacion;
-    
+
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
@@ -114,7 +114,5 @@ public class ComprobantesVentasCobros {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
-    
-    
+
 }
