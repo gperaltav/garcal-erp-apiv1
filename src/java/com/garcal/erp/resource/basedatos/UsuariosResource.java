@@ -96,7 +96,7 @@ public class UsuariosResource {
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
                 .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
                 .header("Access-Control-Allow-Methods", "OPTIONS,POST")
-                //    .entity(new Gson().toJson(postResponse))
+                .entity(new Gson().toJson(postResponse))
                 .build();
     }
 
@@ -146,6 +146,19 @@ public class UsuariosResource {
     @Produces({MediaType.APPLICATION_JSON})
     public Response buscarJson(User user) {
         ArrayList<User> detail = UserDAO.selectFilter(user);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(detail))
+                .build();
+    }
+    @POST
+    @Path("{usu_cod}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response buscarJson(@PathParam("usu_cod") String usu_cod) {
+        ArrayList<User> detail = UserDAO.selectID(usu_cod);
         return Response.status(Response.Status.OK)
                 .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
                 .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")

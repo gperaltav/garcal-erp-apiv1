@@ -146,7 +146,7 @@ public class UserDAO extends ConnectionDB {
 
             varPst = varConn.prepareStatement(varSql);
             varPst.setString(1, user);
-            varPst.executeUpdate();
+            varPst.execute();
             varPst.close();
 
             postResponse = new ResponseAnswer();
@@ -302,6 +302,49 @@ public class UserDAO extends ConnectionDB {
             return userArray;
         }
 
+    }
+     public static ArrayList<User> selectID(String idUsu) {
+        ArrayList<User> userArray = new ArrayList<User>();
+        User user = null;
+        ResultSet varResult = null;
+        PreparedStatement varPst = null;
+        CallableStatement varCall = null;
+        Connection varConn = null;
+        try {
+            varConn = connectionDB();
+            String varSql = " SELECT * FROM public.fun_usurios_get(?)";
+
+            System.out.println(varSql);
+            varPst = varConn.prepareStatement(varSql);
+            varPst.setString(1, idUsu);
+            varResult = varPst.executeQuery();
+            if (varResult != null) {
+                while (varResult.next()) {
+                    user = new User();
+                    user.setUsu_clave(varResult.getString("usu_clave"));
+                    user.setUsu_nombres(varResult.getString("usu_nombres"));
+                    user.setUsu_apellidopaterno(varResult.getString("usu_apellidopaterno"));
+                    user.setUsu_apellidomaterno(varResult.getString("usu_apellidomaterno"));
+                    user.setUsu_nrodocumento(varResult.getString("usu_nrodocumento"));
+                    user.setUsu_telefono(varResult.getString("usu_telefono"));
+                    user.setUsu_direccion(varResult.getString("usu_direccion"));
+                    userArray.add(user);
+                }
+            }
+        } catch (SQLException e) {
+            user = new User();
+            user.setErrorEntity(new ErrorEntity("SQLException", e.getMessage()));
+            userArray.add(user);
+            e.printStackTrace();
+        } catch (Exception e) {
+            user = new User();
+            user.setErrorEntity(new ErrorEntity("Exception", "" + e));
+            userArray.add(user);
+            e.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(varConn, varPst, varResult);
+            return userArray;
+        }
     }
 
 }
