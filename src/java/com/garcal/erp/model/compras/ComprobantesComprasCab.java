@@ -34,7 +34,7 @@ public class ComprobantesComprasCab {
     private Double ccc_tipocambio;
     private Boolean ccc_generamovimiento;
     private String ccc_fechaingreso;
-    private Date ccc_periodoregistro;
+    private String ccc_periodoregistro;
     private String usu_codigo;
     private String ccc_usucreacion;
 
@@ -210,11 +210,11 @@ public class ComprobantesComprasCab {
         this.ccc_fechaingreso = ccc_fechaingreso;
     }
 
-    public Date getCcc_periodoregistro() {
+    public String getCcc_periodoregistro() {
         return ccc_periodoregistro;
     }
 
-    public void setCcc_periodoregistro(Date ccc_periodoregistro) {
+    public void setCcc_periodoregistro(String ccc_periodoregistro) {
         this.ccc_periodoregistro = ccc_periodoregistro;
     }
 

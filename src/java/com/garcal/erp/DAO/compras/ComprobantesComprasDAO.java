@@ -114,7 +114,7 @@ public class ComprobantesComprasDAO extends ConnectionDB {
             varPst.setDouble(14, comprobantescomprascab.getCcc_tipocambio());
             varPst.setBoolean(15, comprobantescomprascab.getCcc_generamovimiento());
             varPst.setDate(16, Utility.getStringToDate(comprobantescomprascab.getCcc_fechaingreso()));
-            varPst.setDate(17, comprobantescomprascab.getCcc_periodoregistro());
+            varPst.setDate(17, Utility.getStringToDate(comprobantescomprascab.getCcc_periodoregistro()));
 
             varPst.setString(18, comprobantescomprascab.getUsu_codigo());
             varPst.setString(19, comprobantescomprascab.getCcc_usucreacion());

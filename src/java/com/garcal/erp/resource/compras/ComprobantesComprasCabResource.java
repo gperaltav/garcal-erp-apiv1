@@ -9,7 +9,9 @@ import com.garcal.erp.DAO.compras.ComprobantesComprasCabDAO;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.compras.ComprobantesComprasCab;
 import com.google.gson.Gson;
+import java.util.ArrayList;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -87,6 +89,22 @@ public class ComprobantesComprasCabResource {
          return ResponseAnswer.status(ResponseAnswer.Status.CREATED)
          .entity(new Gson().toJson(postResponse))
          .build();*/
+    }
+      @GET
+    @Path("{id}")
+    // @Path("{businessid}")
+    @Consumes({MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response getJson(@PathParam("id") Integer id) {
+        //TODO return proper representation object
+        ArrayList<ComprobantesComprasCab> detail = ComprobantesComprasCabDAO.selectAll(id);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization,Accept,Origin")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST,GET")
+                .header("Access-Control-Allow-Credentials", "true")
+                .entity(new Gson().toJson(detail))
+                .build();
     }
 
 }

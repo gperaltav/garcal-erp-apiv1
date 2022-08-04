@@ -296,5 +296,18 @@ public class ComprobantesComprasPagosDAO extends ConnectionDB {
             return comprobantesComprasPagosArray;
         }
     }
+    
+     public static ArrayList<ComprobantesComprasPagos> selectAll() {
+        ComprobantesComprasPagos comprobantesComprasPagos = new ComprobantesComprasPagos();
+        comprobantesComprasPagos.setEmp_id(0);
+        comprobantesComprasPagos.setCct_codigo("");
+        comprobantesComprasPagos.setCcc_serienumero("");
+        comprobantesComprasPagos.setFdc_codigo("");
+        comprobantesComprasPagos.setCcp_nroreferencia("");
+        comprobantesComprasPagos.setCcp_fechacancelacioninicio("");
+        comprobantesComprasPagos.setCcp_fechacancelacionfin("");
+        
+        return selectFiltro(comprobantesComprasPagos);
+    }
 
 }

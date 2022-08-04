@@ -72,6 +72,7 @@ public class ApplicationConfig extends Application {
         resources.add(com.garcal.erp.resource.ventas.ComprobantesVentasCobrosResource.class);
         resources.add(com.garcal.erp.resource.ventas.ComprobantesVentasEstadosResource.class);
         resources.add(com.garcal.erp.resource.ventas.ComprobatesVentasTiposResource.class);
+        resources.add(com.garcal.erp.resource.ventas.GuiasConfiguracionResource.class);
         resources.add(com.garcal.erp.resource.ventas.GuiasResource.class);
     }
 
