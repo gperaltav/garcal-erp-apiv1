@@ -296,7 +296,8 @@ public class ComprobantesComprasPagosDAO extends ConnectionDB {
             return comprobantesComprasPagosArray;
         }
     }
-     public static ArrayList<ComprobantesComprasPagos> selectAll() {
+    
+    public static ArrayList<ComprobantesComprasPagos> selectAll() {
         ComprobantesComprasPagos comprobantesComprasPagos = new ComprobantesComprasPagos();
         comprobantesComprasPagos.setEmp_id(0);
         comprobantesComprasPagos.setCct_codigo("");

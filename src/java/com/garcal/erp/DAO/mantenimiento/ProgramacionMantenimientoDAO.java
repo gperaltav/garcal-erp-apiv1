@@ -5,10 +5,12 @@
  */
 package com.garcal.erp.DAO.mantenimiento;
 
+import com.garcal.erp.connection.ConnectionDB;
+
 /**
  *
  * @author Teresa
  */
-public class ProgramacionMantenimientoDAO {
+public class ProgramacionMantenimientoDAO extends ConnectionDB{
     
 }

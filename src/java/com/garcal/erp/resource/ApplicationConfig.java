@@ -62,6 +62,8 @@ public class ApplicationConfig extends Application {
         resources.add(com.garcal.erp.resource.compras.ComprobantescomprasEntregardineroPendienteResource.class);
         resources.add(com.garcal.erp.resource.controldocumentos.ControlDocumentosTripulacionResource.class);
         resources.add(com.garcal.erp.resource.controldocumentos.ControlDocumentosVehiculosResource.class);
+        resources.add(com.garcal.erp.resource.mantenimiento.MantenimientosDetResource.class);
+        resources.add(com.garcal.erp.resource.mantenimiento.PreventivoPlantillaResource.class);
         resources.add(com.garcal.erp.resource.planificacionviajes.TripulacionOperarioDocumentosResource.class);
         resources.add(com.garcal.erp.resource.planificacionviajes.TripulacionPendientesViajesResource.class);
         resources.add(com.garcal.erp.resource.planificacionviajes.VehiculosPendientesViajesResource.class);
