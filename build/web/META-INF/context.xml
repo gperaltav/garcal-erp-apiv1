@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/garcal-erp-apiv1">
+    <Resource 
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        initialSize="10"
+        maxActive="130"
+        minIdle="10"
+        maxIdle="30"
+        maxWait="15000"
+        name="jdbc/pool_garcal"
+        username="integra" password="integra"
+        removeAbandoned="true"
+        removeAbandonedTimeout="120"
+        url="jdbc:postgresql://51.222.25.71:5432/garcal-db-test"
+        suspectTimeout="30"
+        logAbandoned="true"
+        numTestsPerEvictionRun="5"
+        minEvictableIdleTimeMillis="1000"
+        testWhileIdle="false"
+    />
+</Context>
