@@ -7,13 +7,14 @@ package com.garcal.erp.model.mantenimiento;
 
 import com.garcal.erp.model.ErrorEntity;
 import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  *
  * @author Teresa
  */
 public class MantenimientosCab {
-    
+
     private Integer emp_id;
     private Integer veh_id;
     private String man_fecha;
@@ -22,6 +23,18 @@ public class MantenimientosCab {
     private String man_usucreacion;
     private Integer man_numero;
     private Integer man_id;
+
+    private Integer tar_id;
+    private String mad_descripcion;
+    private String mad_observacion;
+    private String mad_estado;
+    private String mad_usucreacion;
+    
+    private String man_usumodificacion;
+    private String man_fecmodificacion;
+
+    private ArrayList<MantenimientosDet> detalle;
+    
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
@@ -95,8 +108,71 @@ public class MantenimientosCab {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
+
+    public Integer getTar_id() {
+        return tar_id;
+    }
+
+    public void setTar_id(Integer tar_id) {
+        this.tar_id = tar_id;
+    }
+
+    public String getMad_descripcion() {
+        return mad_descripcion;
+    }
+
+    public void setMad_descripcion(String mad_descripcion) {
+        this.mad_descripcion = mad_descripcion;
+    }
+
+    public String getMad_observacion() {
+        return mad_observacion;
+    }
+
+    public void setMad_observacion(String mad_observacion) {
+        this.mad_observacion = mad_observacion;
+    }
+
+    public String getMad_estado() {
+        return mad_estado;
+    }
+
+    public void setMad_estado(String mad_estado) {
+        this.mad_estado = mad_estado;
+    }
+
+    public String getMad_usucreacion() {
+        return mad_usucreacion;
+    }
+
+    public void setMad_usucreacion(String mad_usucreacion) {
+        this.mad_usucreacion = mad_usucreacion;
+    }
+
+    public ArrayList<MantenimientosDet> getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(ArrayList<MantenimientosDet> detalle) {
+        this.detalle = detalle;
+    }
+
+    public String getMan_usumodificacion() {
+        return man_usumodificacion;
+    }
+
+    public void setMan_usumodificacion(String man_usumodificacion) {
+        this.man_usumodificacion = man_usumodificacion;
+    }
+
+    public String getMan_fecmodificacion() {
+        return man_fecmodificacion;
+    }
+
+    public void setMan_fecmodificacion(String man_fecmodificacion) {
+        this.man_fecmodificacion = man_fecmodificacion;
+    }
     
     
-    
-    
+
 }

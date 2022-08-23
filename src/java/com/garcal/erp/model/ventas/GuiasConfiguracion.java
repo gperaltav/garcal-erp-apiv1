@@ -23,7 +23,8 @@ public class GuiasConfiguracion {
     private String gco_usucreacion;
     private Integer gco_id;
     private String veh_placa;
-    
+    private String emp_razonsocial;
+    private String gti_descripcion;
     private ErrorEntity errorEntity = null;
 
     public Integer getEmp_id() {
@@ -105,8 +106,22 @@ public class GuiasConfiguracion {
     public void setVeh_placa(String veh_placa) {
         this.veh_placa = veh_placa;
     }
-    
 
+    public String getEmp_razonsocial() {
+        return emp_razonsocial;
+    }
+
+    public void setEmp_razonsocial(String emp_razonsocial) {
+        this.emp_razonsocial = emp_razonsocial;
+    }
+
+    public String getGti_descripcion() {
+        return gti_descripcion;
+    }
+
+    public void setGti_descripcion(String gti_descripcion) {
+        this.gti_descripcion = gti_descripcion;
+    }
     public ErrorEntity getErrorEntity() {
         return errorEntity;
     }

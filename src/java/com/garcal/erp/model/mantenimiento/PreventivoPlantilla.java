@@ -6,6 +6,7 @@
 package com.garcal.erp.model.mantenimiento;
 
 import com.garcal.erp.model.ErrorEntity;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,7 +21,15 @@ public class PreventivoPlantilla {
     private Double ppa_avisokm;
     private Double ppa_km;
     private String ppa_usucreacion;
+    private String emp_razonsocial;
+    private String veh_placa;
+    private String ppa_descripcion;
+    private String tar_descripcion;
+    private Integer veh_id;
+    private String vma_nombre;
+    
     private ErrorEntity errorEntity = null;
+    private ArrayList<PreventivoPlantillaDet> detalle;
 
     public Integer getPpa_id() {
         return ppa_id;
@@ -70,12 +79,52 @@ public class PreventivoPlantilla {
         this.ppa_km = ppa_km;
     }
 
+    public String getEmp_razonsocial() {
+        return emp_razonsocial;
+    }
+
+    public void setEmp_razonsocial(String emp_razonsocial) {
+        this.emp_razonsocial = emp_razonsocial;
+    }
+
+    public String getVeh_placa() {
+        return veh_placa;
+    }
+
+    public void setVeh_placa(String veh_placa) {
+        this.veh_placa = veh_placa;
+    }
+
     public String getPpa_usucreacion() {
         return ppa_usucreacion;
     }
 
     public void setPpa_usucreacion(String ppa_usucreacion) {
         this.ppa_usucreacion = ppa_usucreacion;
+    }
+
+    public String getPpa_descripcion() {
+        return ppa_descripcion;
+    }
+
+    public void setPpa_descripcion(String ppa_descripcion) {
+        this.ppa_descripcion = ppa_descripcion;
+    }
+
+    public String getTar_descripcion() {
+        return tar_descripcion;
+    }
+
+    public void setTar_descripcion(String tar_descripcion) {
+        this.tar_descripcion = tar_descripcion;
+    }
+
+    public Integer getVeh_id() {
+        return veh_id;
+    }
+
+    public void setVeh_id(Integer veh_id) {
+        this.veh_id = veh_id;
     }
 
     public ErrorEntity getErrorEntity() {
@@ -85,6 +134,21 @@ public class PreventivoPlantilla {
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
     }
-    
+
+    public ArrayList<PreventivoPlantillaDet> getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(ArrayList<PreventivoPlantillaDet> detalle) {
+        this.detalle = detalle;
+    }
+
+    public String getVma_nombre() {
+        return vma_nombre;
+    }
+
+    public void setVma_nombre(String vma_nombre) {
+        this.vma_nombre = vma_nombre;
+    }
     
 }

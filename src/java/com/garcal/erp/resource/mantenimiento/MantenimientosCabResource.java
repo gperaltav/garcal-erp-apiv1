@@ -5,10 +5,73 @@
  */
 package com.garcal.erp.resource.mantenimiento;
 
+import com.garcal.erp.DAO.mantenimiento.MantenimientosCabDAO;
+import com.garcal.erp.model.ResponseAnswer;
+import com.garcal.erp.model.mantenimiento.MantenimientosCab;
+import com.google.gson.Gson;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 /**
  *
  * @author Teresa
  */
+
+@Path("mantenimientoscab")
+
 public class MantenimientosCabResource {
+    
+    @POST
+    @Path("nuevo")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response postJson(MantenimientosCab mantenimientoscab) {
+        /* ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+         Validator validator = factory.getValidator();
+         validator.validate(business);
+         Set<ConstraintViolation<Business>> violations = validator.validate(business);
+
+         if (violations.isEmpty()) {*/
+        ResponseAnswer postResponse = MantenimientosCabDAO.insert(mantenimientoscab);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(postResponse))
+                .build();
+        /*  }
+         PostResponse postResponse = new PostResponse(false, BeanValidators.extractMessage(violations));
+         return ResponseAnswer.status(ResponseAnswer.Status.CREATED)
+         .entity(new Gson().toJson(postResponse))
+         .build();*/
+    }
+    @POST
+    @Path("actualizar")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response actualizarJson(MantenimientosCab mantenimientoscab) {
+        /* ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+         Validator validator = factory.getValidator();
+         validator.validate(business);
+         Set<ConstraintViolation<Business>> violations = validator.validate(business);
+
+         if (violations.isEmpty()) {*/
+        ResponseAnswer postResponse = MantenimientosCabDAO.update(mantenimientoscab);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(postResponse))
+                .build();
+        /*  }
+         PostResponse postResponse = new PostResponse(false, BeanValidators.extractMessage(violations));
+         return ResponseAnswer.status(ResponseAnswer.Status.CREATED)
+         .entity(new Gson().toJson(postResponse))
+         .build();*/
+    }
     
 }

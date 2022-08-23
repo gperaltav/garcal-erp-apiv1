@@ -9,6 +9,7 @@ import com.garcal.erp.DAO.util.Utility;
 import com.garcal.erp.connection.ConnectionDB;
 import com.garcal.erp.model.ResponseAnswer;
 import com.garcal.erp.model.mantenimiento.MantenimientosCab;
+import com.garcal.erp.model.mantenimiento.MantenimientosDet;
 import java.sql.Array;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -24,7 +25,7 @@ import org.apache.commons.dbutils.DbUtils;
  */
 public class MantenimientosCabDAO extends ConnectionDB  {
     
-   /* public static ResponseAnswer insert(MantenimientosCab mantenimientoscab) {
+  public static ResponseAnswer insert(MantenimientosCab mantenimientoscab) {
         ResponseAnswer postResponse = null;
         ResultSet varResult = null;
         PreparedStatement varPst = null;
@@ -33,44 +34,33 @@ public class MantenimientosCabDAO extends ConnectionDB  {
         try {
             varConn = connectionDB();
             
-            ArrayList<MantenimientosCab> detail = mantenimientoscab.getDetalle();
+            ArrayList<MantenimientosDet> detail = mantenimientoscab.getDetalle();
 
-            ArrayList<Integer> proId = new ArrayList();
-            ArrayList<Integer> viaId = new ArrayList();
-            ArrayList<Integer> vehId = new ArrayList();
-            ArrayList<Integer> traId = new ArrayList();
-
-            ArrayList<String> serie = new ArrayList();
-            ArrayList<Double> cantidad = new ArrayList();
-            ArrayList<Double> precioUnitario = new ArrayList();
-            ArrayList<Double> subTotal = new ArrayList();
-            ArrayList<String> unidad = new ArrayList();
+            ArrayList<Integer> tar_id = new ArrayList();
+            ArrayList<String> mad_descripcion = new ArrayList();
+            ArrayList<String> mad_observacion = new ArrayList();
+            ArrayList<String> mad_estado = new ArrayList();
+           
 
             if (detail != null) {
                 for (int i = 0; i < detail.size(); i++) {
-                    proId.add(detail.get(i).getPro_id());
-                    viaId.add(detail.get(i).getVia_id());
-                    vehId.add(detail.get(i).getVeh_id());
-                    traId.add(detail.get(i).getTra_id());
-                    serie.add(detail.get(i).getCcd_serie());
-                    cantidad.add(detail.get(i).getCcd_cantidad());
-                    precioUnitario.add(detail.get(i).getCcd_preciounitario());
-                    subTotal.add(detail.get(i).getCcd_subtotal());
-                    unidad.add(detail.get(i).getUni_unidad());
+                    tar_id.add(detail.get(i).getTar_id());
+                    mad_descripcion.add(detail.get(i).getMad_descripcion());
+                    mad_observacion.add(detail.get(i).getMad_observacion ());
+                    mad_estado.add(detail.get(i).getMad_estado());
+
                 }
             }
 
-            Array arrayProId = varConn.createArrayOf("int4", proId.toArray());
-            Array arrayViaId = varConn.createArrayOf("int4", viaId.toArray());
-            Array arrayVehId = varConn.createArrayOf("int4", vehId.toArray());
-            Array arrayTraId = varConn.createArrayOf("int8", traId.toArray());
-            Array arraySerie = varConn.createArrayOf("varchar", serie.toArray());
-            Array arrayCantidad = varConn.createArrayOf("float8", cantidad.toArray());
-            Array arrayPrecioUnitario = varConn.createArrayOf("float8", precioUnitario.toArray());
-            Array arraySubtotal = varConn.createArrayOf("float8", subTotal.toArray());
-            Array arrayUnidad = varConn.createArrayOf("varchar", unidad.toArray());
-           
+            Array arrayTar_id= varConn.createArrayOf("int4", tar_id.toArray());
+            Array arrayMad_descripcion = varConn.createArrayOf("varchar", mad_descripcion.toArray());
+            Array arrayMad_observacion = varConn.createArrayOf("varchar", mad_observacion.toArray());
+            Array arrayMad_estado = varConn.createArrayOf("varchar", mad_estado.toArray());
+         
             String varSql = "SELECT * FROM mantenimiento.fun_mantenimientoscab_insertar("
+                    + "? ,"
+                    + "? ,"
+                    + "? ,"
                     + "? ,"
                     + "? ,"
                     + "? ,"
@@ -85,10 +75,14 @@ public class MantenimientosCabDAO extends ConnectionDB  {
             varPst.setInt(2, mantenimientoscab.getVeh_id());
             varPst.setDate(3, Utility.getStringToDate(mantenimientoscab.getMan_fecha()));
             varPst.setString(4, mantenimientoscab.getUsu_codigo());
-            varPst.setString(5, mantenimientoscab.getMan_estado());
-            varPst.setString(6, mantenimientoscab.getMan_usucreacion());
-            varPst.setInt(7, mantenimientoscab.getMan_numero());
+            varPst.setString(5, mantenimientoscab.getMan_usucreacion());
+            varPst.setInt(6, mantenimientoscab.getMan_numero());
             
+            varPst.setArray(7, arrayTar_id);
+            varPst.setArray(8, arrayMad_descripcion);
+            varPst.setArray(9, arrayMad_observacion);
+            varPst.setArray(10, arrayMad_estado);
+        
             varPst.executeQuery();
             varPst.close();
 
@@ -111,6 +105,52 @@ public class MantenimientosCabDAO extends ConnectionDB  {
             return postResponse;
         }
 
-    }*/
+    }
+  
+  public static ResponseAnswer update(MantenimientosCab mantenimientoscab) {
+        ResponseAnswer postResponse = null;
+
+        ResultSet varResult = null;
+        PreparedStatement varPst = null;
+        CallableStatement varCall = null;
+        Connection varConn = null;
+        try {
+            varConn = connectionDB();
+            String varSql = "SELECT * FROM  mantenimiento.fun_mantenimientoscab_actualizar ("
+                    + "? ,"
+                    + "? ,"
+                    + "? ,"
+                    + "?  "
+                    + " )";
+            System.out.println(varSql);
+            varPst = varConn.prepareStatement(varSql);
+            varPst.setInt(1, mantenimientoscab.getMan_id());
+            varPst.setString(2, mantenimientoscab.getMan_estado());
+            varPst.setString(3, mantenimientoscab.getMan_usumodificacion());
+            varPst.setDate(4, Utility.getStringToDate( mantenimientoscab.getMan_fecmodificacion()));
+            varPst.executeQuery();
+            varPst.close();
+
+            postResponse = new ResponseAnswer();
+            postResponse.setStatus(Boolean.TRUE);
+            postResponse.setMessage("update full");
+
+        } catch (SQLException e) {
+            postResponse = new ResponseAnswer();
+            postResponse.setStatus(Boolean.FALSE);
+            postResponse.setMessage(e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            postResponse = new ResponseAnswer();
+            postResponse.setStatus(Boolean.FALSE);
+            postResponse.setMessage("Exception " + e);
+            e.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(varConn, varPst, varResult);
+            return postResponse;
+        }
+
+    }
+  
     
 }

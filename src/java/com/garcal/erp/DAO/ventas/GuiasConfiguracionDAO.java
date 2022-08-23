@@ -5,7 +5,6 @@
  */
 package com.garcal.erp.DAO.ventas;
 
-import com.garcal.erp.DAO.util.Utility;
 import com.garcal.erp.connection.ConnectionDB;
 import com.garcal.erp.model.ErrorEntity;
 import com.garcal.erp.model.ResponseAnswer;
@@ -15,7 +14,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 import java.util.ArrayList;
 import org.apache.commons.dbutils.DbUtils;
 
@@ -195,10 +193,10 @@ public class GuiasConfiguracionDAO extends ConnectionDB{
                 while (varResult.next()) {
                     guiasconfiguracion = new GuiasConfiguracion();
                     guiasconfiguracion.setGco_id(varResult.getInt("gco_id"));
-                    guiasconfiguracion.setEmp_id(varResult.getInt("emp_id"));
-                     guiasconfiguracion.setGti_codigo(varResult.getString("gti_codigo"));
+                    guiasconfiguracion.setEmp_razonsocial(varResult.getString("emp_razonsocial"));
+                     guiasconfiguracion.setGti_descripcion(varResult.getString("gti_descripcion"));
                     guiasconfiguracion.setGco_serie(varResult.getString("gco_serie"));
-                    guiasconfiguracion.setVeh_id(varResult.getInt("veh_id"));
+                    guiasconfiguracion.setVeh_placa(varResult.getString("veh_placa"));
                     guiasconfiguracion.setGco_activo(varResult.getBoolean("gco_activo"));
                     guiasconfiguracion.setGco_numeromin(varResult.getInt("gco_numeromin"));
                     guiasconfiguracion.setGco_numeromax(varResult.getInt("gco_numeromax"));

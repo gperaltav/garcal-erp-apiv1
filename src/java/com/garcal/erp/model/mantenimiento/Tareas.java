@@ -18,6 +18,7 @@ public class Tareas {
     private String tar_descripcion;
     private Boolean tar_activo;
     private String tar_usucreacion;
+    private Integer tar_id;
     
     private ErrorEntity errorEntity = null;
 
@@ -67,6 +68,14 @@ public class Tareas {
 
     public void setErrorEntity(ErrorEntity errorEntity) {
         this.errorEntity = errorEntity;
+    }
+
+    public Integer getTar_id() {
+        return tar_id;
+    }
+
+    public void setTar_id(Integer tar_id) {
+        this.tar_id = tar_id;
     }
     
     

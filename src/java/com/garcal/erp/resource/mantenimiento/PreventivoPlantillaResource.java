@@ -12,6 +12,7 @@ import com.garcal.erp.model.mantenimiento.PreventivoPlantilla;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -105,4 +106,55 @@ public class PreventivoPlantillaResource {
                 .build();
     }
     
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response buscarJsonProveedorGet(PreventivoPlantilla preventivoplantilla) {
+        ArrayList<PreventivoPlantilla> detail = PreventivoPlantillaDAO.selectFiltro(preventivoplantilla);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(detail))
+                .build();
+    }
+    @POST
+    @Path("agrupado")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response buscarrJsonProveedorGet(PreventivoPlantilla preventivoplantilla) {
+        ArrayList<PreventivoPlantilla> detail = PreventivoPlantillaDAO.selectAgrupado(preventivoplantilla);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(detail))
+                .build();
+    }
+    @POST
+    @Path("marca")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response buscarrrJsonProveedorGet(PreventivoPlantilla preventivoplantilla) {
+        ArrayList<PreventivoPlantilla> detail = PreventivoPlantillaDAO.selectMarca(preventivoplantilla);
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(detail))
+                .build();
+    }
+    
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response buscarJsonProveedorGet( ) {
+        ArrayList<PreventivoPlantilla> detail = PreventivoPlantillaDAO.selectAlll();
+        return Response.status(Response.Status.OK)
+                .header("Access-Control-Allow-Origin", "*") // Headers for Swagger UI.
+                .header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With,Authorization")
+                .header("Access-Control-Allow-Methods", "OPTIONS,POST")
+                .entity(new Gson().toJson(detail))
+                .build();
+    }
 }
